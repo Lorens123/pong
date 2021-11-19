@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj": {}
+    "C:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj": {}
   },
   "projects": {
-    "c:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj": {
+    "C:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj",
+        "projectUniqueName": "C:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj",
         "projectName": "pong",
-        "projectPath": "c:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj",
+        "projectPath": "C:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\pong.csproj",
         "packagesPath": "C:\\Users\\lorens.vinge\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\obj\\",
+        "outputPath": "C:\\Users\\lorens.vinge\\Documents\\Programmring 2\\pong\\pong\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lorens.vinge\\AppData\\Roaming\\NuGet\\NuGet.Config"
