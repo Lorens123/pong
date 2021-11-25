@@ -1,11 +1,11 @@
 ﻿using Raylib_cs;
 
-
+Ball ball = new Ball(23, 25);
 Raylib.InitWindow(800, 600, "Ultimate Pong Game");
 
 // Player p1 = new LeftPlayer();
 // Player p2 = new RightPlayer();
-Ball ball = new Ball();
+
 
 while (!Raylib.WindowShouldClose())
 {
@@ -17,7 +17,7 @@ while (!Raylib.WindowShouldClose())
 
     Raylib.ClearBackground(Color.BLACK);
 
-    Raylib.DrawCircle(100, 100, 100, Color.WHITE);
+
 
     // p1.Draw();
     // p2.Draw();
