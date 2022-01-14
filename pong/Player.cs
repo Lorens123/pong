@@ -21,6 +21,8 @@ public class Player
     protected KeyboardKey downKey;
     protected Vector2 movement;
 
+    LeftPlayer lRect = new LeftPlayer();
+
 
     public Player()
     {
@@ -49,6 +51,7 @@ public class Player
 
 
         rect.y += movement.Y;
+        lRect.LeftUpdate();
     }
 
     public void Draw()

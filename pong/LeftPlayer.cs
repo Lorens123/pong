@@ -16,8 +16,9 @@ public class LeftPlayer : Player
         upKey = KeyboardKey.KEY_W;
         downKey = KeyboardKey.KEY_S;
     }
-    protected void LeftUpdate()
+    public void LeftUpdate()
     {
+        movement.Y = 0;
         if (Raylib.IsKeyDown(upKey))
         {
             movement.Y = -4;
