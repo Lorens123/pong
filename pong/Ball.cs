@@ -10,19 +10,36 @@ public class Ball
     private Rectangle rect;
     private Random generator = new Random();
     private Vector2 movement;
-    private Vector2 position;
 
 
     public Ball(int x, int y)
     {
         rect = new Rectangle(x, y, 20, 20);
+        // position = new Vector2(30, 30);
+        movement = new Vector2(2f, 2f);
+
+
+
 
     }
     public void Update()
     {
-        position = new Vector2(30, 30);
-        movement = new Vector2(0.5f, 0.5f);
-        position += movement;
+
+
+        rect.x += movement.X;
+        rect.y -= movement.Y;
+
+        if (rect.y > 580 || rect.y < 0)
+        {
+            movement.Y = -movement.Y;
+        }
+
+        if (rect.x > 780 || rect.x < 0)
+        {
+            movement.X = -movement.X;
+        }
+
+
     }
 
     public void Draw()
