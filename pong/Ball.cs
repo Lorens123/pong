@@ -16,7 +16,7 @@ public class Ball
     {
         rect = new Rectangle(x, y, 20, 20);
         // position = new Vector2(30, 30);
-        movement = new Vector2(2f, 2f);
+        movement = new Vector2(5f, 5f);
 
 
 

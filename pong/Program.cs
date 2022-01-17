@@ -22,7 +22,8 @@ while (!Raylib.WindowShouldClose())
 
     Raylib.ClearBackground(Color.BLACK);
     p1.Update();
-    p2.LeftUpdate();
+    p2.Update();
+
 
     ball.Update();
 

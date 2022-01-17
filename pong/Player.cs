@@ -21,7 +21,7 @@ public class Player
     protected KeyboardKey downKey;
     protected Vector2 movement;
 
-    LeftPlayer lRect = new LeftPlayer();
+
 
 
     public Player()
@@ -29,6 +29,7 @@ public class Player
         rect = new Rectangle(790, 300, 10, 100);
         upKey = KeyboardKey.KEY_UP;
         downKey = KeyboardKey.KEY_DOWN;
+
     }
 
     public void Update()
@@ -43,15 +44,22 @@ public class Player
         {
             movement.Y = 4;
         }
-        if (rect.y > 560)
+
+        rect.y += movement.Y;
+
+        if (rect.y < 0)
         {
-            movement.Y = 0;
+            rect.y -= movement.Y;
+        }
+        if (rect.y > 500)
+        {
+
         }
 
 
 
-        rect.y += movement.Y;
-        lRect.LeftUpdate();
+
+
     }
 
     public void Draw()
