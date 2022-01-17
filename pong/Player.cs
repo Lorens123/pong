@@ -38,11 +38,11 @@ public class Player
 
         if (Raylib.IsKeyDown(upKey))
         {
-            movement.Y = -4;
+            movement.Y = -6;
         }
         if (Raylib.IsKeyDown(downKey))
         {
-            movement.Y = 4;
+            movement.Y = 6;
         }
 
         rect.y += movement.Y;
@@ -53,7 +53,7 @@ public class Player
         }
         if (rect.y > 500)
         {
-
+            rect.y -= movement.Y;
         }
 
 
@@ -66,6 +66,10 @@ public class Player
     {
         Raylib.DrawRectangleRec(rect, Color.RED);
 
+        if (rect.x < 300)
+        {
+            Raylib.DrawRectangleRec(rect, Color.BLUE);
+        }
     }
 
 
