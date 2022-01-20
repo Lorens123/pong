@@ -38,11 +38,11 @@ public class Player
 
         if (Raylib.IsKeyDown(upKey))
         {
-            movement.Y = -6;
+            movement.Y = -7;
         }
         if (Raylib.IsKeyDown(downKey))
         {
-            movement.Y = 6;
+            movement.Y = 7;
         }
 
         rect.y += movement.Y;

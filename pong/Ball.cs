@@ -7,9 +7,9 @@ public class Ball
     // Den ska kunna stunda på paddlarna och på vågrätta väggarna.
     // När bollen nuddar väggen på sidorna ger det 1 poäng. Max 5 för att vinna med.
     // I början av varje spel ska bollen åka till "random" håll antingen höger eller vänster. 
-    private Rectangle rect;
+    public Rectangle rect;
     private Random generator = new Random();
-    private Vector2 movement;
+    public Vector2 movement;
 
 
     public Ball(int x, int y)
@@ -24,21 +24,23 @@ public class Ball
     }
     public void Update()
     {
+        // movement = 0;
 
-
-        rect.x += movement.X;
-        rect.y -= movement.Y;
-
-        if (rect.y > 580 || rect.y < 0)
+        if (rect.y < 0 || rect.y > 580)
         {
             movement.Y = -movement.Y;
         }
 
-        if (rect.x > 780 || rect.x < 0)
+        if (rect.x < 0 || rect.x > 780)
         {
             movement.X = -movement.X;
+
         }
 
+
+
+        rect.x += movement.X;
+        rect.y -= movement.Y;
 
     }
 
