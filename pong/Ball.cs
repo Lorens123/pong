@@ -10,6 +10,7 @@ public class Ball
     public Rectangle rect;
     private Random generator = new Random();
     public Vector2 movement;
+    public bool IsMoving;
 
 
     public Ball(int x, int y)
@@ -29,6 +30,7 @@ public class Ball
         if (rect.y < 0 || rect.y > 580)
         {
             movement.Y = -movement.Y;
+
         }
 
         if (rect.x < 0 || rect.x > 780)
@@ -36,6 +38,7 @@ public class Ball
             movement.X = -movement.X;
 
         }
+
 
 
 

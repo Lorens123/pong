@@ -24,6 +24,7 @@ public class Player
 
 
 
+
     public Player()
     {
         rect = new Rectangle(790, 300, 10, 100);
@@ -55,10 +56,6 @@ public class Player
         {
             rect.y -= movement.Y;
         }
-
-
-
-
 
     }
 

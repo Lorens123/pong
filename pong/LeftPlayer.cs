@@ -16,6 +16,7 @@ public class LeftPlayer : Player
         upKey = KeyboardKey.KEY_W;
         downKey = KeyboardKey.KEY_S;
 
+
     }
 
 }
