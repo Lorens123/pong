@@ -11,18 +11,58 @@ public class Ball
     private Random generator = new Random();
     public Vector2 movement;
     public bool IsMoving;
+    private int poäng = 0;
+    private int poäng2 = 0;
 
 
     public Ball(int x, int y)
     {
         rect = new Rectangle(x, y, 20, 20);
-        // position = new Vector2(30, 30);
         movement = new Vector2(5f, 5f);
 
-
-
-
     }
+    public void GetPoints()
+    {
+        Raylib.DrawText(poäng.ToString(), 370, 10, 30, Color.BLUE);
+        Raylib.DrawText(":", 400, 10, 30, Color.PURPLE);
+        Raylib.DrawText(poäng2.ToString(), 420, 10, 30, Color.RED);
+        if (rect.x < 0)
+        {
+            poäng2 += 1;
+            movement.X = -movement.X;
+            Reset();
+        }
+        if (rect.x > Raylib.GetScreenWidth() - rect.width)
+        {
+            poäng += 1;
+            movement.X = -movement.X;
+            Reset();
+
+        }
+        if (poäng2 >= 5)
+        {
+            Raylib.DrawText("RED HAS WON! GAME OVER!", 100, 200, 40, Color.PURPLE);
+            movement.X = 0;
+            movement.Y = 0;
+        }
+        if (poäng >= 5)
+        {
+            Raylib.DrawText("BLUE HAS WON! GAME OVER!", 100, 200, 40, Color.PURPLE);
+            movement.X = 0;
+            movement.Y = 0;
+        }
+    }
+
+    public void Reset()
+    {
+        rect.x = Raylib.GetScreenWidth() / 2;
+        rect.y = Raylib.GetScreenHeight() / 2;
+
+        movement = new Vector2(5f, 5f);
+        movement.X = generator.Next(4, 6);
+        movement.Y = generator.Next(-8, 8);
+    }
+
     public void Update()
     {
         // movement = 0;
@@ -39,9 +79,6 @@ public class Ball
 
         }
 
-
-
-
         rect.x += movement.X;
         rect.y -= movement.Y;
 
@@ -49,7 +86,7 @@ public class Ball
 
     public void Draw()
     {
-        Raylib.DrawRectangleRec(rect, Color.WHITE);
+        Raylib.DrawRectangleRec(rect, Color.PURPLE);
 
     }
 }
