@@ -18,7 +18,7 @@ public class Ball
     public Ball(int x, int y)
     {
         rect = new Rectangle(x, y, 20, 20);
-        movement = new Vector2(5f, 5f);
+        movement = new Vector2(7f, 7f);
 
     }
     public void GetPoints()
@@ -58,7 +58,7 @@ public class Ball
         rect.x = Raylib.GetScreenWidth() / 2;
         rect.y = Raylib.GetScreenHeight() / 2;
 
-        movement = new Vector2(5f, 5f);
+        movement = new Vector2();
         movement.X = generator.Next(4, 6);
         movement.Y = generator.Next(-8, 8);
     }
@@ -73,14 +73,14 @@ public class Ball
 
         }
 
-        if (rect.x < 0 || rect.x > 780)
-        {
-            movement.X = -movement.X;
+        // if (rect.x < 0 || rect.x > 780)
+        // {
+        //     movement.X = -movement.X;
 
-        }
+        // }
 
-        rect.x += movement.X;
-        rect.y -= movement.Y;
+        rect.x -= movement.X;
+        rect.y += movement.Y;
 
     }
 

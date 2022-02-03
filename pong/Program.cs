@@ -34,9 +34,23 @@ while (!Raylib.WindowShouldClose())
     ball.GetPoints();
     p1.Update();
     p2.Update();
+
+    bool leftHit = p2.CollidesWith(ball.rect);
+    bool rightHit = p1.CollidesWith(ball.rect);
+    if (leftHit == true)
+    {
+        Console.WriteLine("hit!");
+        ball.movement.X = -ball.movement.X;
+    }
+    if (rightHit == true)
+    {
+
+        ball.movement.X = -ball.movement.X;
+    }
+    ball.Update();
+
     p1.Draw();
     p2.Draw();
-    ball.Update();
     ball.Draw();
     Raylib.EndDrawing();
 }

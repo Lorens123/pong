@@ -33,6 +33,11 @@ public class Player
 
     }
 
+    public bool CollidesWith(Rectangle r)
+    {
+        return Raylib.CheckCollisionRecs(rect, r);
+    }
+
     public void Update()
     {
         movement.Y = 0;
