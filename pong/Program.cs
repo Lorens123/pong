@@ -9,10 +9,6 @@ Player p2 = new LeftPlayer();
 // int poäng = 0;
 // int poäng2 = 0;
 
-
-
-
-
 // Collision collision = new Collision(p1, p2, ball
 
 Raylib.InitWindow(800, 600, "Ultimate Pong Game");
@@ -28,25 +24,27 @@ while (!Raylib.WindowShouldClose())
     Raylib.BeginDrawing();
 
     Raylib.ClearBackground(Color.BLACK);
-
-
-
-    ball.GetPoints();
-    p1.Update();
-    p2.Update();
-
     bool leftHit = p2.CollidesWith(ball.rect);
     bool rightHit = p1.CollidesWith(ball.rect);
+
+
     if (leftHit == true)
     {
-        Console.WriteLine("hit!");
+
         ball.movement.X = -ball.movement.X;
+        ball.movement.Y -= p2.GetYMovement();
     }
     if (rightHit == true)
     {
 
         ball.movement.X = -ball.movement.X;
+        ball.movement.Y -= p1.GetYMovement();
     }
+
+    ball.GetPoints();
+    p1.Update();
+    p2.Update();
+
     ball.Update();
 
     p1.Draw();

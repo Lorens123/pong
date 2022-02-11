@@ -41,13 +41,13 @@ public class Ball
         }
         if (poäng2 >= 5)
         {
-            Raylib.DrawText("RED HAS WON! GAME OVER!", 100, 200, 40, Color.PURPLE);
+            Raylib.DrawText("RED HAS WON! GAME OVER!", 100, 200, 40, Color.RED);
             movement.X = 0;
             movement.Y = 0;
         }
         if (poäng >= 5)
         {
-            Raylib.DrawText("BLUE HAS WON! GAME OVER!", 100, 200, 40, Color.PURPLE);
+            Raylib.DrawText("BLUE HAS WON! GAME OVER!", 100, 200, 40, Color.BLUE);
             movement.X = 0;
             movement.Y = 0;
         }
@@ -59,8 +59,9 @@ public class Ball
         rect.y = Raylib.GetScreenHeight() / 2;
 
         movement = new Vector2();
-        movement.X = generator.Next(4, 6);
-        movement.Y = generator.Next(-8, 8);
+        movement.X = 5;
+        // movement.Y = generator.Next(-8, 8);
+        movement.Y = 0;
     }
 
     public void Update()
@@ -79,7 +80,7 @@ public class Ball
 
         // }
 
-        rect.x -= movement.X;
+        rect.x += movement.X;
         rect.y += movement.Y;
 
     }

@@ -19,7 +19,7 @@ public class Player
 
     protected KeyboardKey upKey;
     protected KeyboardKey downKey;
-    protected Vector2 movement;
+    private Vector2 movement;
 
 
 
@@ -72,6 +72,11 @@ public class Player
         {
             Raylib.DrawRectangleRec(rect, Color.BLUE);
         }
+    }
+
+    public float GetYMovement()
+    {
+        return movement.Y;
     }
 
 
